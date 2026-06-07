@@ -26,7 +26,8 @@ export async function POST(request: Request) {
       apiKey: process.env.ANTHROPIC_API_KEY,
     })
 
-    // 正しいモデル名（2025年時点で最も安定した本番向けモデル）
+    // 使用モデル：Claude 3.5 Sonnet (claude-3-5-sonnet-20241022)。
+    // 安定したJSON出力の信頼性が高いため選択。モデル更新時はこの行を変更してください。
     const message = await client.messages.create({
       model: 'claude-3-5-sonnet-20241022',
       max_tokens: 2048,

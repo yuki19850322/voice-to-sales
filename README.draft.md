@@ -32,46 +32,9 @@ AI（Claude）が即座に以下の3パターンを生成します：
 
 ## ライブデモ
 
-**（デプロイ完了後に実際のURLを記載します）**
+（Vercelデプロイ後、ここにリンクを記載予定）
 
 現在はローカルで簡単に起動できます（下記「クイックスタート」参照）。
-
-> **デプロイが完了したら、取得した本番URLをこのチャットに教えてください。**  
-> すぐにこのセクションを更新して push します。
-
-### Vercel へのデプロイ手順（推奨）
-
-このプロジェクトは Next.js なので、Vercel へのデプロイが最も簡単です。
-
-1. **GitHub に push する**
-   ```bash
-   git add .
-   git commit -m "docs: 大幅な README 改善 + CI 追加 + 軽微な polish"
-   git push origin main
-   ```
-
-2. **Vercel にプロジェクトを作成**
-   - [Vercel](https://vercel.com) にログイン（GitHub アカウントでOK）
-   - 「Add New Project」→ 「Import Git Repository」
-   - `voice-to-sales` リポジトリを選択して Import
-
-3. **環境変数を設定**
-   - デプロイ設定画面で **Environment Variables** を開く
-   - 以下を追加：
-     - Name: `ANTHROPIC_API_KEY`
-     - Value: あなたの Anthropic API キー（`sk-ant-...`）
-   - 「Production」 にチェックを入れて保存
-
-4. **Deploy**
-   - 「Deploy」ボタンをクリック
-   - ビルドが完了したら、表示される URL をコピー
-
-5. **README を更新**
-   - デプロイ完了後、このセクションの URL を実際のものに置き換えて push
-
-**注意**: デプロイ後は `ANTHROPIC_API_KEY` を Vercel の Environment Variables に必ず設定してください。設定しないと API 呼び出しでエラーになります。
-
-ローカル開発と同じく、1日3回の無料制限（クライアントサイド）はそのまま動作します。
 
 ---
 
@@ -186,10 +149,6 @@ npm run build    # 本番ビルド（成功確認済み）
 npm run lint     # ESLint
 ```
 
-### Vercel デプロイ（詳細は上記の「ライブデモ」セクションを参照）
-
-Vercel 推奨。環境変数 `ANTHROPIC_API_KEY` の設定を忘れずに。
-
 ### プロジェクト構成（意図的にシンプルに保っています）
 
 ```
@@ -214,7 +173,7 @@ IssueやPull Requestを歓迎します！
 - より良いエラーハンドリング
 - ドキュメントの改善
 
-本プロジェクト自体が「AI（Claude + Grok Build）で作られた」であることを念頭に、AIツールの活用も大歓迎です。
+本プロジェクト自体が「AI（Claude + Grok Build）で作られた」ものであることを念頭に、AIツールの活用も大歓迎です。
 
 ---
 

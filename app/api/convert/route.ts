@@ -26,10 +26,12 @@ export async function POST(request: Request) {
       apiKey: process.env.ANTHROPIC_API_KEY,
     })
 
-    // 使用モデル：Claude 3.5 Sonnet (claude-3-5-sonnet-20241022)。
-    // 安定したJSON出力の信頼性が高いため選択。モデル更新時はこの行を変更してください。
+    // 使用モデル：Claude 3.5 Sonnet (claude-3-5-sonnet-20240620) - 安定版
+    // 以前の claude-3-5-sonnet-20241022 は404になったため安定版に変更。
+    // JSON出力の信頼性が高く、営業文生成に適している。
+    // 将来的にClaude 4 Sonnetなどに移行する場合はこの行を更新してください。
     const message = await client.messages.create({
-      model: 'claude-3-5-sonnet-20241022',
+      model: 'claude-3-5-sonnet-20240620',
       max_tokens: 2048,
       temperature: 0.7,
       system: `あなたは優秀なセールスコピーライターです。

@@ -14,12 +14,32 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
+}
+
+/* Force light color scheme. This app uses a light gradient + white cards design.
+   Prevents OS dark mode from making input text invisible (white on white). */
+html {
+  color-scheme: light;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Defense-in-depth: ensure form controls are always readable */
+input:not([type="radio"]):not([type="checkbox"]),
+textarea,
+select {
+  color: #171717;
+  background-color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af; /* gray-400 */
+  opacity: 1;
 }

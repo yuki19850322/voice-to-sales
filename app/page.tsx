@@ -174,7 +174,7 @@ export default function Home() {
               required
               rows={5}
               placeholder="例：このコーチングを受けて3ヶ月で売上が2倍になりました。最初は半信半疑でしたが、毎週の振り返りで自分の強みに気づけて..."
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
             />
           </div>
 
@@ -189,7 +189,7 @@ export default function Home() {
               onChange={(e) => setProduct(e.target.value)}
               required
               placeholder="例：売上アップ3ヶ月コーチングプログラム"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 bg-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -209,7 +209,7 @@ export default function Home() {
                     onChange={() => setMedia(m)}
                     className="text-blue-600"
                   />
-                  <span className="text-sm text-gray-700">{m}</span>
+                  <span className="text-sm text-gray-900">{m}</span>
                 </label>
               ))}
             </div>

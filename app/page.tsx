@@ -153,7 +153,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             お客様の声 → セールス文変換
           </h1>
-          <p className="text-gray-500">
+          <p className="text-gray-600">
             口コミ・レビューを貼るだけで、3種類のセールス文を自動生成
           </p>
         </div>
@@ -227,7 +227,7 @@ export default function Home() {
             {/* 残り回数表示 */}
             {usageLoaded && (
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-500">
+                <span className="text-gray-600">
                   今日の無料利用回数
                 </span>
                 <span className={`font-medium ${isLimitReached ? 'text-red-600' : 'text-gray-700'}`}>
@@ -255,7 +255,7 @@ export default function Home() {
 
             {/* 回数上限時の案内 */}
             {isLimitReached && (
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-600">
                 明日になればまた無料でご利用いただけます。
               </p>
             )}
@@ -339,7 +339,7 @@ function OutputCard({
       <div className="flex justify-between items-start mb-3">
         <div>
           <h3 className="font-semibold text-gray-900 text-sm">{title}</h3>
-          <p className="text-xs text-gray-400 mt-0.5">{description}</p>
+          <p className="text-xs text-gray-500 mt-0.5">{description}</p>
         </div>
         <button
           onClick={onCopy}
